@@ -1,15 +1,11 @@
-package com.dashuai.learning.jta;
+package com.agan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Created in 2019.01.18
- *
- * @author Liaozihong
- */
+
 @SpringBootApplication
-public class JtaApplication {
+public class DtpApplication {
 
     /**
      * The entry point of application.
@@ -17,7 +13,7 @@ public class JtaApplication {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(JtaApplication.class, args);
+        SpringApplication.run(DtpApplication.class, args);
     }
 
 }

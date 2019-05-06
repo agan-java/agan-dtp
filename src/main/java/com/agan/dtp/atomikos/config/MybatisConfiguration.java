@@ -1,4 +1,4 @@
-package com.dashuai.learning.jta.config;
+package com.agan.dtp.atomikos.config;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
@@ -15,26 +15,19 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-/**
- * Mybatis configuration
- * <p/>
- * Created in 2018.12.03
- * <p/>
- *
- * @author Liaozihong
- */
+
 @Configuration
 @EnableConfigurationProperties
 @EnableTransactionManagement(proxyTargetClass = true)
 public class MybatisConfiguration {
     /**
-     * spring数据库配置前缀.
+     * account数据库配置前缀.
      */
-    final static String SPRING_PREFIX = "spring.jta.atomikos.datasource.spring";
+    final static String ACCOUNT_PREFIX = "spring.atomikos.datasource.account";
     /**
-     * test数据库配置前缀.
+     * redpacket数据库配置前缀.
      */
-    final static String TEST_PREFIX = "spring.jta.atomikos.datasource.test";
+    final static String REDPACKET_PREFIX = "spring.atomikos.datasource.redpacket";
 
     /**
      * The constant logger.
@@ -83,9 +76,9 @@ public class MybatisConfiguration {
      *
      * @return the data source
      */
-    @Bean(name = "SpringDataSource")
-    @ConfigurationProperties(prefix = SPRING_PREFIX)  // application.properties中对应属性的前缀
-    public DataSource springDataSource() {
+    @Bean(name = "AccountDataSource")
+    @ConfigurationProperties(prefix = ACCOUNT_PREFIX)  // application.properties中对应属性的前缀
+    public DataSource accountDataSource() {
         return new AtomikosDataSourceBean();
     }
 
@@ -94,9 +87,9 @@ public class MybatisConfiguration {
      *
      * @return the data source
      */
-    @Bean(name = "TestDataSource")
-    @ConfigurationProperties(prefix = TEST_PREFIX)  // application.properties中对应属性的前缀
-    public DataSource testDataSource() {
+    @Bean(name = "RedPacketDataSource")
+    @ConfigurationProperties(prefix = REDPACKET_PREFIX)  // application.properties中对应属性的前缀
+    public DataSource redPacketDataSource() {
         return new AtomikosDataSourceBean();
     }
 }
