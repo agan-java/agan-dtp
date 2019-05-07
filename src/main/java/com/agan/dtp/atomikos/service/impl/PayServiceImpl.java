@@ -32,6 +32,7 @@ public class PayServiceImpl implements PayService {
         red.setUserId(userId);
         RedPacketAccount redDTO=this.redPacketAccountMapper.selectOne(red);
         System.out.println(redDTO);
+        //红包余额扣除
         redDTO.setBalanceAmount(redDTO.getBalanceAmount()-redAccount);
         this.redPacketAccountMapper.updateByPrimaryKey(redDTO);
         //int n=9/0;

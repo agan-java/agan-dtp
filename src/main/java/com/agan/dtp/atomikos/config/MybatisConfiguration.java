@@ -72,7 +72,7 @@ public class MybatisConfiguration {
     }
 
     /**
-     * 配置Spring数据库的数据源
+     * 配置Account数据库的数据源
      *
      * @return the data source
      */
@@ -83,7 +83,7 @@ public class MybatisConfiguration {
     }
 
     /**
-     * 配置Test数据库的数据源
+     * 配置RedPacket数据库的数据源
      *
      * @return the data source
      */
