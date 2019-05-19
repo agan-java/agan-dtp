@@ -9,7 +9,7 @@ public class AP {
     public Connection getRmAccountConn(){
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://47.106.128.80:5555/xa_account", "root", "lsb18");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.0.138:3307/xa_account?characterEncoding=utf8&useSSL=false&autoReconnect=true", "root", "agan");
             return conn;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -19,7 +19,7 @@ public class AP {
 
     public Connection getRmRedConn(){
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://47.106.128.80:5555/xa_red_account", "root", "lsb18");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.0.138:3308/xa_red_account?characterEncoding=utf8&useSSL=false&autoReconnect=true", "root", "agan");
             return conn;
         } catch (SQLException e) {
             e.printStackTrace();
