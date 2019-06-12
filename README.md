@@ -35,8 +35,8 @@ PayServiceImpl 作用：模拟下订单的同时扣除，账户余额，红包�
 2.atomikos日志的自定义配置
 spring.jta.log-dir=transaction-logs-agan
 
-
-
+## 本源码出自以下课程；想要更加系统性学习，请参考以下课程。
+https://study.163.com/course/courseMain.htm?courseId=1209240846&share=2&shareId=1016671292
 
 
 
