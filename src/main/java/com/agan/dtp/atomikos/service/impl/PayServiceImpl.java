@@ -8,7 +8,12 @@ import com.agan.dtp.atomikos.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
+/**
+ * @author 阿甘
+ * @see https://study.163.com/course/courseMain.htm?courseId=1209367806&share=2&shareId=1016671292
+ * @version 1.0
+ * 注：如有任何疑问欢迎加入QQ群977438372 进行讨论
+ */
 @Service
 public class PayServiceImpl implements PayService {
 
